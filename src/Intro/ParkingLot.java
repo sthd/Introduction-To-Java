@@ -37,7 +37,7 @@ public class ParkingLot {
         float value = (float)this.parking.get(v);
         if (this.parking.get(v) != null){
             this.expectedCash-= value*this.price;
-            this.cash+=value;
+            this.cash+=value*this.price;
             if ( v.changeTires() == 2){
                 this.bikeNumber--;
             }
@@ -55,11 +55,15 @@ public class ParkingLot {
     }
 
     public float getExpectedRevenue(){
-        return this.expectedCash;
+        return this.expectedCash + this.cash;
     }
 
     public float countBikes(){
         return this.bikeNumber;
+    }
+
+    public long countVehicles(){
+        return this.parking.keySet().stream().filter(x -> (x instanceof Vehicle && !( x instanceof SpaceShip) )).count();
     }
 
 

@@ -4,11 +4,11 @@ import java.util.*;
 
 abstract class Vehicle {
 
-    private String Colour = "Colour";
-    private String Make = "Make";
-    private float GPK = 0;
-    private float Gas = 0;
-    private float TankSize = 0;
+    protected String Colour = "Colour";
+    protected String Make = "Make";
+    protected float GPK = 0;
+    protected float Gas = 0;
+    protected float TankSize = 0;
     //private int wheels = 0;
 
     //String by reference?

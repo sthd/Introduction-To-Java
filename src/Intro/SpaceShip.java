@@ -13,7 +13,7 @@ abstract class SpaceShip extends Vehicle{
     }
 
     boolean liftoff(float distance){
-        super.drive(distance);
+        return super.drive(distance);
     }
 
     void shoot(){
